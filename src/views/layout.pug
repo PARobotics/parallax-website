@@ -1,0 +1,60 @@
+doctype html
+html(lang = "en")
+  head
+    meta(charset = "utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block title
+    
+    link(href = "./bower_components/bootstrap/dist/css/bootstrap.min.css" rel = "stylesheet" type = "text/css")
+    link(href = "./bower_components/font-awesome/css/font-awesome.min.css" rel = "stylesheet" type = "text/css")
+    link(href = "./dist/main.css" rel = "stylesheet" type = "text/css")
+    script(src = "./bower_components/jquery/dist/jquery.min.js")
+    script(src = "./bower_components/bootstrap/dist/js/bootstrap.min.js")
+    
+    block scripts
+      
+    include config.pug
+    
+    -var short = false
+    -var backgroundImage = "" 
+    block vars
+  body
+    #wrapper
+      nav
+        .left
+        .right
+          a(href = "/") HOME
+          a(href = "/#about") ABOUT US
+          //a(href = "/robots.html") OUR ROBOTS
+          a(href = "/join.html") JOIN THE TEAM
+          a(href = "/curriculum.html") CURRICULUM
+          a(href = "/sponsor.html") SPONSOR US
+        
+      - var headerclass = ""
+      if short
+        - headerclass = "short"
+        
+      header(class = headerclass style = "background-image: url(./Assets/Graphics/" + backgroundImage +")")
+        .overlay
+        .text
+          block header  
+        
+      #body        
+        block content
+        
+      footer.container-fluid
+        #top.row
+          .col-md-12  
+            p Phillips Academy Robotics is made possible in part through a grant from the Abbot Academy Association, continuing Abbot's tradition of boldness, innovation, and caring.
+        hr
+        #bottom.row
+          .col-md-2.left
+            p Parallax, 2017
+          .col-md-10.right
+            a(href = "https://github.com/PARobotics")
+              i.fa.fa-github
+            a MASTHEAD 
+            a(href = "/awards.html") AWARDS
+            a(href = "/sponsor.html") SPONSOR US

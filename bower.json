@@ -1,0 +1,17 @@
+{
+  "name": "parobotics-site",
+  "authors": [
+    "jeffreyshen19 <jshen@andover.edu>"
+  ],
+  "description": "Website for Phillips Academy Robotics",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

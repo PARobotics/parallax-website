@@ -1,0 +1,19 @@
+extends layout
+
+block title
+  title PA Robotics | Curriculum
+  
+block vars
+  -short = true;
+  -backgroundImage = "books.jpg"
+
+block header
+  h1 Curriculum 
+  p We write down what we've learned over the years so future students don't have to repeat our mistakes.
+
+block content
+  #curriculum.box
+    p We wanted to develop a curriculum to hold all the information we've learned about how to build robots. Given that our program is completely student run and we all eventually graduate, we wanted to be able to pass down what we've learned to future students in an easily viewable, searchable, and editable way. The curriculum is hosted on a publicly available Github repository.
+    br
+    br
+    a.button.button-filled(target = "_blank" href = "https://github.com/PARobotics/parallax-curriculum") GO TO THE CURRICULUM

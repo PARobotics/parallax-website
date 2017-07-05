@@ -1,0 +1,28 @@
+footer{
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  #top{
+    text-align: center;
+    font-style: italic;
+  }
+  hr{
+    margin: 15px;
+  }
+  .left{
+    p{
+      font-family: amaranth;
+    }
+  }
+  .right{
+    text-align: right;
+    a{
+      margin-left: 8px;
+      &:hover{
+        color: $dark-blue;
+      }
+    }
+  }
+}

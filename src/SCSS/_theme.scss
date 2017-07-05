@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "amaranth";
+  src: url("../Assets/Fonts/amaranth/Amaranth-Regular.ttf");
+}
+
+@font-face {
+  font-family: "titillium";
+  src: url("../Assets/Fonts/titilliumweb/TitilliumWeb-Regular.ttf");
+}
+
+@font-face {
+  font-family: "titillium";
+  src: url("../Assets/Fonts/titilliumweb/TitilliumWeb-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "titillium";
+  src: url("../Assets/Fonts/titilliumweb/TitilliumWeb-Italic.ttf");
+  font-style: italic;
+}
+
+$white: #F9F7F7;
+$gray: #DBE2EF;
+$blue: #3F72AF;
+$dark-blue: #112D4E;
+
+h1, h2, h3, h4, h5, h6{
+  font-family: amaranth;
+}
+
+h1{
+  font-size: 4em;
+}
+
+h2{
+  font-size: 3em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+h4{
+  font-size: 1.5em;
+}
+
+p, span, li, td, th, i, strong{
+  font-family: titillium;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+a{
+  font-family: titillium;
+  font-weight: bold;
+  color: $blue;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s all;
+  &:hover{
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+strong{
+  font-weight: bold;
+}
+
+i{
+  font-style: italic;
+}
+
+.button{
+  font-family: amaranth;
+  font-size: 1.2em;
+  border: 1px solid $white;
+  padding: 8px 16px;
+  margin-right: 5px;
+  color: $white;
+  &:hover{
+    color: $gray;
+    border-color: $gray;
+  }
+}
+
+.button-filled{
+  border-color: $blue;
+  background-color: $blue;
+  color: $white;
+  &:hover{
+    color: $gray;
+    border-color: $blue;
+  }
+}

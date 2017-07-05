@@ -1,0 +1,22 @@
+extends layout
+
+block title
+  title PA Robotics | Our Robots
+  
+block vars
+  -backgroundImage = "hypnos.png"
+
+block header
+  h1 Our Robots
+  p Each year we build and program two robots, each with their own special features.
+  br
+  br
+  a.button(href = "#thisyear") THIS YEAR'S ROBOTS
+  a.button.button-filled(href = "#pastyears") PAST ROBOTS
+
+block content
+  #thisyear.box.robotGallery
+    h3 This Year's Robots
+  hr
+  #pastyears.box.robotGallery
+    h3 Past Robots
