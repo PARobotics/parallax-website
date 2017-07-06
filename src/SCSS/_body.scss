@@ -82,3 +82,63 @@
     font-size: 1.2em;
   }
 }
+
+@media screen and (max-width: 900px){
+  #body{
+    padding-bottom: 140px;
+    .box{
+      .text{
+        width: 70%;
+      }
+    }
+
+    #curriculum, #join{
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  #body{
+    padding-bottom: 160px;
+    .box{
+      .text{
+        width: 90%;
+      }
+    }
+
+    #sponsorus{
+      width: 90%;
+      ul{
+        width: 80%;
+      }
+    }
+
+    #curriculum, #join{
+      width: 90%;
+    }
+  }
+
+  header{
+    .text{
+      padding: 80px 40px;
+    }
+  }
+
+  header.short{
+    .text{
+      padding: 40px 40px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  footer{
+    #bottom{
+      .left, .right{
+        text-align: center;
+      }
+    }
+  }
+}

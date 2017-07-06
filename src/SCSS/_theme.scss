@@ -76,9 +76,11 @@ i{
   font-family: amaranth;
   font-size: 1.2em;
   border: 1px solid $white;
-  padding: 8px 16px;
+  padding: 10px 18px;
   margin-right: 5px;
+  margin-bottom: 5px;
   color: $white;
+  display: inline-block;
   &:hover{
     color: $gray;
     border-color: $gray;
