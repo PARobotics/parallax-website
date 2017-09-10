@@ -45,3 +45,12 @@ header.short{
     display: none;
   }*/
 }
+
+@media screen and (max-width: 450px){
+  header.short{
+    height: 60vh;
+    .text{
+
+    }
+  }
+}

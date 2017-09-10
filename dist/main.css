@@ -188,6 +188,10 @@ header.short {
   header.short .text {
     padding: 80px 60px; }
 
+@media screen and (max-width: 450px) {
+  header.short {
+    height: 60vh; } }
+
 footer {
   padding: 15px;
   position: absolute;
