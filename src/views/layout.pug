@@ -37,6 +37,8 @@ html(lang = "en")
       - var headerclass = ""
       if short
         - headerclass = "short"
+      if backgroundImage == "team.JPG"
+        - headerclass += " team"
         
       header(class = headerclass style = "background-image: url(./Assets/Graphics/" + backgroundImage +")")
         .overlay
