@@ -1,0 +1,41 @@
+extends layout
+
+block title
+  title PA Robotics
+  
+block vars
+  -backgroundImage = "cover-new.jpg"
+  
+block scripts
+  script(src = "./dist/index.min.js")
+
+block header
+  h1 We're Parallax!
+  p Phillips Academy's Robotics Program and Competitive VEX Robotics Team
+  br
+  br
+  a.button(onclick = "launchPopup()")
+    i.fa.fa-play
+    | &nbsp;WATCH OUR VIDEO
+  a.button.button-filled(href = "/join.html") JOIN OUR PROGRAM
+
+block content
+  #videoOverlay(hidden)
+  video#video(controls hidden)
+    source(src = "/Assets/Graphics/promote.mp4" type = "video/mp4")
+    Your browser does not support the video tag
+  a#videoCloseButton(onclick = "closePopup()" hidden)
+    i.fa.fa-times
+  .box#about
+    h3 About Us
+    .text
+      p We’re <a href = "http://www.andover.edu" target = "_blank">Phillips Academy’s</a> VEX robotics program. Founded in 2015, we compete annually in the global VEX robotics competition and are dedicated to providing <i>all</i> students an engaging way to learn engineering and computer science through robotics. Along with being an inclusive and diverse program, we are a very successful, with at least one of our teams qualifying for the State or World Championships each year. You can check out our awards <a href = "/awards.html">here</a>. 
+      br
+      h4 How are we different? 
+      p We believe in a design and programming centric way of building robots: Using physics, careful thought for the small details, and complex algorithms to fuel our success, rather than focusing on brute force. In short, we believe in <i>working hard, but also working intelligently</i>. We also think robotics provides an excellent outlet for STEM learning, so our program encompasses many facets of that: We integrate physics and software into our program, use tools like the Jupyter notebook, and teach students how to use machines like 3D printers and laser cutters that are available in our school’s Makerspace. 
+      br
+      p We also go to a boarding school, and are a completely student run organization, which poses additional challenges. All of the technical work, as well the club organization has to be done by students, which paves the way for many leadership opportunities. Given that each student will eventually graduate, we have developed a student produced curriculum (link <a href = "https://github.com/PARobotics/parallax-curriculum">here</a>) and a reusable software library (link <a href = "https://github.com/PARobotics/parallax-library">here</a>) to ensure that our knowledge will get passed on to future students.
+      br
+      h4 What is VEX?
+      p VEX Robotics is a global robotics competition for high schoolers. A new challenge comes out each year, and students need to design, build, and program a robot that can effectively tackle the challenges of each year’s game. In a season, teams go to a variety of local competitions, and if they qualify, can advance to the state, national, and international level. You can read more about the program <a href = "http://www.vexrobotics.com" target = "_blank">here</a>. 
+      br

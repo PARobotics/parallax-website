@@ -181,6 +181,10 @@ header {
 
 header.short {
   background: #112D4E;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 50vh;
   /*.overlay{
     display: none;
