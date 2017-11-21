@@ -14,23 +14,23 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('views', function buildHTML() {
-  return gulp.src(['./src/views/*.pug', '!src/views/config.pug', '!src/views/layout.pug'])
+  return gulp.src(['./vex/src/views/*.pug', '!vex/src/views/config.pug', '!vex/src/views/layout.pug'])
   .pipe(pug())
-  .pipe(gulp.dest('.'));
+  .pipe(gulp.dest('./vex'));
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./src/SCSS/*.scss')
+  return gulp.src('./vex/src/SCSS/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./vex/dist/'));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./src/SCSS/*.scss', ['sass']);
+  gulp.watch('./vex/src/SCSS/*.scss', ['sass']);
 });
 
 gulp.task('compress', function() {
-  gulp.src('./src/JS/*.js')
+  gulp.src('./vex/src/JS/*.js')
     .pipe(concat('index.js'))
     .pipe(minify({
         ext:{
@@ -38,15 +38,15 @@ gulp.task('compress', function() {
         },
         noSource: true
     }))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./vex/dist/'));
 });
 
 gulp.task('js:watch', function () {
-  gulp.watch('./src/JS/*.js', ['compress']);
+  gulp.watch('./vex/src/JS/*.js', ['compress']);
 });
 
 gulp.task('pug:watch', function () {
-  gulp.watch('./src/views/*.pug', ['views']);
+  gulp.watch('./vex/src/views/*.pug', ['views']);
 });
 
 gulp.task('default', ['sass', 'sass:watch', 'compress', 'js:watch', 'views', 'pug:watch', 'webserver']);
